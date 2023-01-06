@@ -10,6 +10,8 @@ module.exports = {
         sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        "color-getir-navbar-text": "#dddbff",
+        "color-getir-navbar": "#4C3398",
         "color-getir-white": "#fff",
         "color-getir-white-transparent": "#ffffffa6",
         "color-getir-black": "#191919",
@@ -32,6 +34,7 @@ module.exports = {
         "color-getir-brand-yellow": "#ffd300",
         "color-getir-purple-light": "#dbdbff",
         "color-getir-black-800": "#0e0e0e",
+        "color-getir-border": "#dfdee2",
       },
     },
   },

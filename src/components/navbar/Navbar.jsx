@@ -1,5 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { TfiWorld } from "react-icons/tfi";
+import { BsPersonFill, BsPersonPlusFill } from "react-icons/bs";
+import NavbarButton from "./NavbarButton";
 
 const navLinks = [
   {
@@ -13,8 +16,8 @@ const navLinks = [
     getir: "getir",
   },
   {
-    to: "big",
-    label: "big",
+    to: "more",
+    label: "more",
     getir: "getir",
   },
   {
@@ -26,11 +29,11 @@ const navLinks = [
 
 const Navbar = () => {
   return (
-    <div className="bg-color-getir-primary text-xl">
-      <div className="container mx-auto flex max-w-6xl items-center justify-between">
+    <div className="sticky top-0 bg-color-getir-navbar text-xl">
+      <div className="wrapper mx-auto flex max-w-6xl items-center justify-between">
         {/* Nav Links */}
         <nav>
-          <ul className="flex gap-2 text-base font-semibold text-color-getir-gray-blue">
+          <ul className="flex gap-2 text-base font-semibold text-color-getir-navbar-text">
             {navLinks.map(({ to, label, getir }) => (
               <li key={label} className="">
                 <NavLink to={to}>
@@ -58,9 +61,15 @@ const Navbar = () => {
 
         {/* Account Info */}
         <div className="flex gap-7 text-base font-semibold text-color-getir-gray-blue">
-          <button className="font-normal">English(EN)</button>
-          <button>Login</button>
-          <button>Signup</button>
+          <NavbarButton>
+            <TfiWorld size={16} /> English (EN)
+          </NavbarButton>
+          <NavbarButton>
+            <BsPersonFill /> Login
+          </NavbarButton>
+          <NavbarButton>
+            <BsPersonPlusFill /> Signup
+          </NavbarButton>
         </div>
       </div>
     </div>

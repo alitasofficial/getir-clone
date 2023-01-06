@@ -1,11 +1,14 @@
+import Categories from "../components/categories/Categories";
 import Header from "../components/Header";
+import Promotions from "../components/promotions/Promotions";
+import Footer from "../components/footer/Footer";
 
 const Getir = () => {
   return (
     <>
       <Header />
-      <div>Categories</div>
-      <div>Campaigns</div>
+      <Categories />
+      <Promotions />
     </>
   );
 };
